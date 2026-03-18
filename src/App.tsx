@@ -35,7 +35,7 @@ const PARTICLES_OPTIONS: ISourceOptions = {
       speed: 1,
       straight: false,
     },
-    number: { density: { enable: true }, value: 30 },
+    number: { density: { enable: true }, value: 90 },
     opacity: { value: 0.4 },
     shape: { type: 'circle' },
     size: { value: { min: 1, max: 3 } },
