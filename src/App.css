@@ -244,6 +244,9 @@ a { cursor: pointer; }
   background-attachment: fixed;
   min-height: 100vh;
 }
+@media (max-width: 1024px) {
+  .background { background-attachment: scroll; }
+}
 
 /* ─── Back button (shared by ProjectPage / PaperPage) ────────── */
 .backBtn {

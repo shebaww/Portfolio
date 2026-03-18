@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, memo } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
@@ -45,7 +45,7 @@ const PARTICLES_OPTIONS: ISourceOptions = {
   detectRetina: true,
 };
 
-function ParticlesBackground() {
+const ParticlesBackground = memo(function ParticlesBackground() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -63,9 +63,9 @@ function ParticlesBackground() {
       style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }}
     />
   );
-}
+});
 
-function Navbar({ isBarHidden, isMenuOpen, toggleMenu, scrollToSection }: {
+const Navbar = memo(function Navbar({ isBarHidden, isMenuOpen, toggleMenu, scrollToSection }: {
   isBarHidden: boolean;
   isMenuOpen: boolean;
   toggleMenu: () => void;
@@ -100,7 +100,7 @@ function Navbar({ isBarHidden, isMenuOpen, toggleMenu, scrollToSection }: {
       </nav>
     </div>
   );
-}
+});
 
 function SplashScreen({ onDone }: { onDone: () => void }) {
   const [bootLines, setBootLines] = useState<string[]>([]);
@@ -163,27 +163,60 @@ function AppShell() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const lastScrollTop = useRef(0);
+  const ticking = useRef(false);
+
+  // Disable scrolling while splash screen is active
+  useEffect(() => {
+    if (!splashDone) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [splashDone]);
 
   useEffect(() => {
     const onScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      setScrollProgress((scrollTop / docHeight) * 100);
-      setIsBarHidden(scrollTop > lastScrollTop.current);
-      lastScrollTop.current = scrollTop <= 0 ? 0 : scrollTop;
-      setIsMenuOpen(false);
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          
+          if (docHeight > 0) {
+            setScrollProgress(Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)));
+          } else {
+            setScrollProgress(0);
+          }
+
+          // Threshold of 10px to avoid flickering
+          if (Math.abs(scrollTop - lastScrollTop.current) > 10) {
+            setIsBarHidden(scrollTop > lastScrollTop.current && scrollTop > 70);
+            lastScrollTop.current = scrollTop <= 0 ? 0 : scrollTop;
+          }
+
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
     };
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const scrollToSection = useCallback((id: string) => {
     setIsMenuOpen(false);
-    navigate('/home');
-    setTimeout(() => {
+    const isHome = window.location.pathname.endsWith('/home') || window.location.pathname.endsWith('/Portfolio/') || window.location.pathname.endsWith('/Portfolio');
+    
+    if (isHome) {
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+    } else {
+      navigate('/home');
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150); // Increased timeout slightly for reliable navigation remount
+    }
   }, [navigate]);
 
   return (
@@ -192,7 +225,7 @@ function AppShell() {
 
       <ParticlesBackground />
 
-      <div className="depth-gauge">
+      <div className="depth-gauge" style={{ pointerEvents: 'none' }}>
         <div className="depth-track">
           <div className="depth-fill" style={{ height: `${scrollProgress}%` }} />
           <div className="depth-marker" style={{ top: `${scrollProgress}%` }} />

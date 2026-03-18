@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Introduction from '../components/Introduction';
 import About from '../components/About';
 import Career from '../components/Career';
@@ -44,7 +45,7 @@ function ScrollTopBtn({ onClick }: { onClick: () => void }) {
   );
 }
 
-export default function Home({ scrollToSection }: HomeProps) {
+const Home = memo(function Home({ scrollToSection }: HomeProps) {
   return (
     <div className="home-container">
       <section id="home"><Introduction /></section>
@@ -82,4 +83,6 @@ export default function Home({ scrollToSection }: HomeProps) {
       </section>
     </div>
   );
-}
+});
+
+export default Home;
