@@ -1,18 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { useReveal } from '../hooks/useReveal';
-import { useDecode } from '../hooks/useDecode';
 import { Career as CareerData } from '../constants';
 import './Career.css';
 
 export default function Career() {
   const revealRef = useReveal();
-  const { ref: decodeRef, onMouseEnter, onMouseLeave } = useDecode();
   const containerRef = useRef<HTMLDivElement>(null);
-
-  const headingRef = (el: HTMLHeadingElement | null) => {
-    (revealRef as React.MutableRefObject<HTMLHeadingElement | null>).current = el;
-    (decodeRef as React.MutableRefObject<HTMLHeadingElement | null>).current = el;
-  };
 
   // Animate timeline entries and line on scroll
   useEffect(() => {
@@ -36,7 +29,7 @@ export default function Career() {
 
   return (
     <div className="career-container">
-      <h1 ref={headingRef} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Career</h1>
+      <h1 ref={revealRef as React.Ref<HTMLHeadingElement>}>Career</h1>
       <div className="timeline-container" ref={containerRef}>
         {CareerData.map((item, i) => (
           <div key={i} className="timeline-entry">

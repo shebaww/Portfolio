@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
-import { useDecode } from '../hooks/useDecode';
 import { useTilt } from '../hooks/useTilt';
 import { useMagnetic } from '../hooks/useMagnetic';
 import { Papers as PapersData } from '../constants';
@@ -42,16 +41,10 @@ function PaperCard({ paper, index }: { paper: typeof PapersData[0]; index: numbe
 
 export default function Papers() {
   const revealRef = useReveal();
-  const { ref: decodeRef, onMouseEnter, onMouseLeave } = useDecode();
-
-  const headingRef = (el: HTMLHeadingElement | null) => {
-    (revealRef as React.MutableRefObject<HTMLHeadingElement | null>).current = el;
-    (decodeRef as React.MutableRefObject<HTMLHeadingElement | null>).current = el;
-  };
 
   return (
     <div className="papers-container">
-      <h1 ref={headingRef} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Papers</h1>
+      <h1 ref={revealRef as React.Ref<HTMLHeadingElement>}>Papers</h1>
       <div className="paper-grid">
         {PapersData.map((paper, i) => <PaperCard key={paper.link} paper={paper} index={i} />)}
       </div>

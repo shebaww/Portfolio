@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useReveal } from '../hooks/useReveal';
-import { useDecode } from '../hooks/useDecode';
 import { Projects as ProjectsData } from '../constants';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
@@ -8,19 +7,13 @@ import './Projects.css';
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
   const revealRef = useReveal();
-  const { ref: decodeRef, onMouseEnter, onMouseLeave } = useDecode();
-
-  const headingRef = (el: HTMLHeadingElement | null) => {
-    (revealRef as React.MutableRefObject<HTMLHeadingElement | null>).current = el;
-    (decodeRef as React.MutableRefObject<HTMLHeadingElement | null>).current = el;
-  };
 
   const relevant = ProjectsData.filter(p => p.relevant);
   const hidden   = ProjectsData.filter(p => !p.relevant);
 
   return (
     <section className="projects-container">
-      <h1 ref={headingRef} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+      <h1 ref={revealRef as React.Ref<HTMLHeadingElement>}>
         Projects <span className="title-subtext">(click for more info)</span>
       </h1>
       <div className="project-list">

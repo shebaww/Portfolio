@@ -6,8 +6,6 @@ import type { ISourceOptions } from '@tsparticles/engine';
 import Home from './pages/Home';
 import ProjectPage from './pages/ProjectPage';
 import PaperPage from './pages/PaperPage';
-import { useDecode } from './hooks/useDecode';
-import { useExplode } from './hooks/useExplode';
 import './App.css';
 
 const ANCHORS = ['home', 'about', 'career', 'papers', 'projects', 'coursework'];
@@ -71,18 +69,10 @@ const Navbar = memo(function Navbar({ isBarHidden, isMenuOpen, toggleMenu, scrol
   toggleMenu: () => void;
   scrollToSection: (id: string) => void;
 }) {
-  const { ref: decodeRef, onMouseEnter, onMouseLeave } = useDecode();
-  const explodeRef = useExplode();
-
-  const nameRef = (el: HTMLHeadingElement | null) => {
-    (decodeRef as React.MutableRefObject<HTMLElement | null>).current = el;
-    (explodeRef as React.MutableRefObject<HTMLElement | null>).current = el;
-  };
-
   return (
     <div className={`nav-bar${isBarHidden ? ' hidden' : ''}`} role="navigation" aria-label="Main Navigation">
       <div className="top-bar">
-        <h3 className="name-header" ref={nameRef} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <h3 className="name-header">
           Evan Goldman
         </h3>
         <button className="hamburger" onClick={toggleMenu} aria-label="Toggle navigation menu" aria-expanded={isMenuOpen}>
@@ -161,7 +151,6 @@ function AppShell() {
   const [splashDone, setSplashDone] = useState(false);
   const [isBarHidden, setIsBarHidden] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const lastScrollTop = useRef(0);
   const ticking = useRef(false);
 
@@ -180,14 +169,7 @@ function AppShell() {
       if (!ticking.current) {
         window.requestAnimationFrame(() => {
           const scrollTop = window.scrollY || document.documentElement.scrollTop;
-          const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
           
-          if (docHeight > 0) {
-            setScrollProgress(Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)));
-          } else {
-            setScrollProgress(0);
-          }
-
           // Threshold of 10px to avoid flickering
           if (Math.abs(scrollTop - lastScrollTop.current) > 10) {
             setIsBarHidden(scrollTop > lastScrollTop.current && scrollTop > 70);
@@ -224,17 +206,6 @@ function AppShell() {
       {!splashDone && <SplashScreen onDone={() => setSplashDone(true)} />}
 
       <ParticlesBackground />
-
-      <div className="depth-gauge" style={{ pointerEvents: 'none' }}>
-        <div className="depth-track">
-          <div className="depth-fill" style={{ height: `${scrollProgress}%` }} />
-          <div className="depth-marker" style={{ top: `${scrollProgress}%` }} />
-        </div>
-        <div className="depth-readout">
-          DEPTH<br />
-          <span className="depth-value">{Math.round(scrollProgress)}</span>
-        </div>
-      </div>
 
       <div className="background">
         <Navbar

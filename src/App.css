@@ -203,39 +203,6 @@ a { cursor: pointer; }
 }
 .nav-item:hover::after, a:focus .nav-item::after { width: 100%; left: 0; }
 
-/* ─── Depth Gauge ───────────────────────────────────────────── */
-.depth-gauge {
-  position: fixed; right: 20px; top: 50%;
-  transform: translateY(-50%);
-  display: flex; align-items: center; gap: 15px;
-  z-index: 10001; pointer-events: none;
-  height: 40vh; opacity: 0.8;
-}
-.depth-track {
-  position: relative; width: 4px; height: 100%;
-  background: rgba(255,255,255,0.1); border-radius: 2px;
-}
-.depth-fill {
-  position: absolute; top: 0; left: 0; width: 100%;
-  background: linear-gradient(180deg, #7c3aed, #3b82f6);
-  box-shadow: 0 0 10px var(--accent-glow); border-radius: 2px;
-  transition: height 0.1s ease-out;
-}
-.depth-marker {
-  position: absolute; left: -6px;
-  width: 16px; height: 4px;
-  background: #fff; box-shadow: 0 0 10px #fff;
-  transition: top 0.1s ease-out;
-}
-.depth-readout {
-  font-family: var(--font-mono); font-size: 0.7rem;
-  color: var(--text-muted); text-align: right; line-height: 1.2;
-}
-.depth-value {
-  font-size: 1.2rem; color: var(--accent);
-  font-weight: bold; text-shadow: 0 0 8px var(--accent-glow);
-}
-
 /* ─── Background ────────────────────────────────────────────── */
 .background {
   background-image: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.95)), url('/assets/background.png');
