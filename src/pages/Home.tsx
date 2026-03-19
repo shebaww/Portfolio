@@ -76,7 +76,7 @@ const Home = memo(function Home({ scrollToSection }: HomeProps) {
             </MagneticLink>
           </div>
           <div className="footer-bottom">
-            <p className="copyright">© 2026 Evan Goldman. Designed & Built with ❤️ in React.</p>
+            <p className="copyright">© 2026 Nahom Natnael.</p>
             <ScrollTopBtn onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
           </div>
         </div>
