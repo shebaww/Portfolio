@@ -11,7 +11,7 @@ export default function Coursework() {
       <div className="coursework-columns">
         <div className="course-category glass glow-on-hover">
           <div className="category-header">
-            <h3>Graduate</h3>
+            <h3>HighSchool</h3>
             <div className="badge">MS</div>
           </div>
           <ul>
@@ -20,7 +20,7 @@ export default function Coursework() {
         </div>
         <div className="course-category glass glow-on-hover">
           <div className="category-header">
-            <h3>Undergrad</h3>
+            <h3>Independent Study</h3>
             <div className="badge">BS</div>
           </div>
           <ul>

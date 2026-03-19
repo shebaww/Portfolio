@@ -82,12 +82,12 @@ export default function Introduction() {
     setTimeout(() => {
       let response: { text: string; type: string };
       if (lower === 'help')         response = { text: 'Available commands: whoami, skills, projects, contact, clear, sudo', type: 'info' };
-      else if (lower === 'whoami')  response = { text: 'Evan Goldman. Robotics & ML Engineer building autonomous systems.', type: 'success' };
-      else if (lower === 'skills')  response = { text: '> Python, C++, ROS, PyTorch, React, SLAM, Embedded Systems', type: 'success' };
-      else if (lower === 'contact') response = { text: 'Email: evangoldman10@gmail.com', type: 'success' };
+      else if (lower === 'whoami')  response = { text: 'Nahom Natnael. Full Stack Web developer, Algorithmic Trader and Highschool Student', type: 'success' };
+      else if (lower === 'skills')  response = { text: '> Python, C, Front-end, Back-end, SQL, React', type: 'success' };
+      else if (lower === 'contact') response = { text: 'Email: nahomnatnael87@gmail.com', type: 'success' };
       else if (lower === 'projects')response = { text: 'Scroll down to view my projects.', type: 'info' };
       else if (lower === 'clear')   { setTerminalHistory([]); return; }
-      else if (lower.startsWith('sudo')) response = { text: 'evan is not in the sudoers file. This incident will be reported.', type: 'error' };
+      else if (lower.startsWith('sudo')) response = { text: 'nahom is not in the sudoers file. This incident will be reported.', type: 'error' };
       else response = { text: `zsh: command not found: ${cmd}`, type: 'error' };
 
       setTerminalHistory(prev => [...prev, response]);
@@ -104,34 +104,34 @@ export default function Introduction() {
         <div className="left-side">
           <div className="image-container">
             <div className="hologram-overlay" />
-            <img src="assets/evan.jpg" alt="Evan Goldman Headshot" className="animate-fade-in" />
+            <img src="assets/nahom1.jpg" alt="Nahom Natnael Headshot" className="animate-fade-in" />
             <div className="image-glow" />
           </div>
         </div>
 
         {/* Right: Text + Terminal */}
         <div className="right-side">
-          <h1 className="animate-slide-up headline" style={{ animationDelay: '0.2s' }}>
-            Hello, I'm <span className="gradient-text">Evan</span>
-          </h1>
+          <h2 className="animate-slide-up headline" style={{ animationDelay: '0.2s' }}>
+            Hello, I'm <span className="gradient-text">Nahom</span>
+          </h2>
           <h2 className="animate-slide-up subheadline" style={{ animationDelay: '0.4s', minHeight: '3rem' }}>
             {currentPhrase}
           </h2>
           <p className="animate-slide-up description" style={{ animationDelay: '0.6s' }}>
-            Welcome to my portfolio! I build intelligent systems that bridge the gap between software and the physical world.
+            Welcome to my portfolio! I build Full-Stack Websites and Algorithm Trading Scripts.
           </p>
 
           <div className="button-container animate-slide-up" style={{ animationDelay: '0.8s' }}>
-            <SocialBtn href="https://www.linkedin.com/in/egold018/" src="assets/linkedin-icon.png" alt="LinkedIn Profile" />
-            <SocialBtn href="https://github.com/egold010?tab=repositories" src="assets/github-icon.png" alt="GitHub Profile" />
-            <SocialBtn href="mailto:evangoldman10@gmail.com" src="assets/mail-icon.png" alt="Email Address" />
+            <SocialBtn href="https://www.linkedin.com" src="assets/linkedin-icon.png" alt="LinkedIn Profile" />
+            <SocialBtn href="https://github.com/shebaww?tab=repositories" src="assets/github-icon.png" alt="GitHub Profile" />
+            <SocialBtn href="mailto:nahomnatnael87@gmail.com@gmail.com" src="assets/mail-icon.png" alt="Email Address" />
           </div>
 
           {/* Interactive Terminal */}
           <div className="hero-console animate-slide-up" style={{ animationDelay: '1.1s' }} onClick={() => inputRef.current?.focus()}>
             <div className="console-header">
               <span className="dot red" /><span className="dot yellow" /><span className="dot green" />
-              <span className="console-title">zsh — evan@portfolio</span>
+              <span className="console-title">zsh — nahom@portfolio</span>
             </div>
             <div className="console-body" ref={consoleBodyRef}>
               <p className="console-line"><span className="prompt">~ %</span> ./init_autonomous_agent.sh</p>

@@ -7,6 +7,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)// Force rebuild
-// Force rebuild with correct paths
-// Force rebuild with correct paths
+)
