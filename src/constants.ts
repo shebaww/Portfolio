@@ -15,7 +15,8 @@ export const Projects: CardItem[] = [
         category: "Software",
         date: "3/5/2026",
         relevant: true,
-        skills: ["HTML", "TailwindCSS", "CSS", "Javascript"]
+        skills: ["HTML", "TailwindCSS", "CSS", "Javascript"],
+        link: "https://shebaww.github.io/Business_Club_Website",
     },
     {
         title: "Ipod Video Converter",
@@ -23,7 +24,8 @@ export const Projects: CardItem[] = [
         category: "Software",
         date: "3/19/2026",
         relevant: true,
-        skills: ["Linux", "Bash"]
+        skills: ["Linux", "Bash"],
+        link: "https://github.com/shebaww/Ipod-Converter",
     },
     {
         title: "Nexus AI",
@@ -31,7 +33,8 @@ export const Projects: CardItem[] = [
         category: "Software",
         date: "02/10/2026",
         relevant: true,
-        skills: ["HTML", "CSS", "Javascript", "EmailJS"]
+        skills: ["HTML", "CSS", "Javascript", "EmailJS"],
+        link: "https://github.com/shebaww/Nexus-AI",
     },
     {
         title: "Website",

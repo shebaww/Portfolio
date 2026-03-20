@@ -51,7 +51,7 @@ export default function ProjectCard({ project }: Props) {
       className="project-card-host"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      onClick={() => navigate(`/project/${project.title}`)}
+      onClick={() => window.open(project.link, "_blank")}
     >
       <div className="project-card-container">
         <div className="project-image">
