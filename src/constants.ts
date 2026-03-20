@@ -55,7 +55,7 @@ export const Career = [
         date: 'Mar 2026 - Present',
         description: 'Website Administrator',
         skills: ['HTML', 'CSS', 'Javascript'], // Add all stacks 
-        image: '/Portfolio/public/assets/details-images/addis.jpg',
+        image: '/public/assets/details-images/addis.jpg',
     },
     {
         title: 'Intern',
