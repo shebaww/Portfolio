@@ -100,8 +100,8 @@ export const Papers = [
 ];
 
 export const Phrases = [
-    "Algorithmic Trader",
-    "Enthusiastic Student",
+    "Aspiring Quant Developer",
+    "Ambitious Student",
     "Full-Stack Developer",
-    "Lifelong Learner"
+    "Funny Guy"
 ];
