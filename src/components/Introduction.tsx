@@ -82,7 +82,7 @@ export default function Introduction() {
     setTimeout(() => {
       let response: { text: string; type: string };
       if (lower === 'help')         response = { text: 'Available commands: whoami, skills, projects, contact, clear, sudo', type: 'info' };
-      else if (lower === 'whoami')  response = { text: 'Nahom Natnael. Full Stack Web developer, Algorithmic Trader and Highschool Student', type: 'success' };
+      else if (lower === 'whoami')  response = { text: 'Nahom Teklemariam. Full Stack Web developer, Algorithmic Trader and Highschool Student', type: 'success' };
       else if (lower === 'skills')  response = { text: '> Python, C, Front-end, Back-end, SQL, React', type: 'success' };
       else if (lower === 'contact') response = { text: 'Email: nahomnatnael87@gmail.com', type: 'success' };
       else if (lower === 'projects')response = { text: 'Scroll down to view my projects.', type: 'info' };

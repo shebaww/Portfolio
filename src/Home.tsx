@@ -99,7 +99,7 @@ export default function Home({ scrollToSection }: HomeProps) {
             </MagneticLink>
           </div>
           <div className="footer-bottom">
-            <p className="copyright">© 2026 Nahom Natnael.</p>
+            <p className="copyright">© 2026 Nahom Teklemariam.</p>
             <ScrollTopBtn onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
           </div>
         </div>
