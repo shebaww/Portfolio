@@ -59,7 +59,7 @@ const Home = memo(function Home({ scrollToSection }: HomeProps) {
       <section id="contact" className="footer-section">
         <div className="footer-container glass glow-on-hover">
           <h1 className="footer-heading">
-            Let's build something <br /><span className="gradient-text">amazing</span> together.
+            Let's build something <br /><span className="gradient-text-amazing">amazing</span> together.
           </h1>
           <p className="footer-subtext">
             Always open for new opportunities and collaborations in robotics and AI.

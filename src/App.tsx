@@ -25,8 +25,8 @@ const PARTICLES_OPTIONS: ISourceOptions = {
     },
   },
   particles: {
-    color: { value: '#7c3aed' },
-    links: { color: '#3b82f6', distance: 150, enable: true, opacity: 0.3, width: 1 },
+    color: { value: '#e4b363' },
+    links: { color: '#e4b363', distance: 100, enable: true, opacity: 0.8, width: 1 },
     move: {
       direction: 'none',
       enable: true,

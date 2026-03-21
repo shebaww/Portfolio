@@ -20,5 +20,78 @@
   margin: 2rem 0 1rem;
 }
 
-.project-content p { margin-bottom: 1rem; }
-.project-content img { max-width: 100%; border-radius: 12px; margin: 1rem 0; }
+/* Add gold accent for headings - optional but nice */
+.project-content h1 {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.project-content a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(228, 179, 99, 0.3);
+  transition: all 0.3s ease;
+}
+
+.project-content a:hover {
+  color: var(--accent-glow);
+  border-bottom-color: var(--accent);
+}
+
+.project-content p { 
+  margin-bottom: 1rem; 
+}
+
+.project-content img { 
+  max-width: 100%; 
+  border-radius: 12px; 
+  margin: 1rem 0;
+  border: 1px solid rgba(228, 179, 99, 0.2);
+}
+
+/* Optional: Style code blocks if you have them */
+.project-content code {
+  background: rgba(228, 179, 99, 0.08);
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent-glow);
+}
+
+.project-content pre {
+  background: rgba(10, 12, 18, 0.8);
+  border: 1px solid rgba(228, 179, 99, 0.15);
+  border-radius: 12px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.project-content pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--text-muted);
+}
+
+/* Optional: Style blockquotes */
+.project-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--text-muted-dark);
+  font-style: italic;
+}
+
+/* Optional: Style lists */
+.project-content ul, 
+.project-content ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.project-content li {
+  margin: 0.5rem 0;
+}
