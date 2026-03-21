@@ -248,4 +248,5 @@ a { cursor: pointer; }
   .nav-header { display: none; flex-direction: column; align-items: center; gap: 1rem; width: 100%; margin: 0; padding: 10px 0; }
   .nav-header.open { display: flex; }
   .nav-header a h3 { font-size: 1rem; }
+  .gradient-text-amazing{ font-size: 55px;}
 }
