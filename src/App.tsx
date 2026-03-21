@@ -5,10 +5,10 @@ import { loadSlim } from '@tsparticles/slim';
 import type { ISourceOptions } from '@tsparticles/engine';
 import Home from './pages/Home';
 import ProjectPage from './pages/ProjectPage';
-import PaperPage from './pages/PaperPage';
+import AwardsPage from './pages/AwardsPage';
 import './App.css';
 
-const ANCHORS = ['home', 'about', 'career', 'papers', 'projects', 'coursework'];
+const ANCHORS = ['home', 'about', 'career', 'awards', 'projects', 'coursework'];
 
 const PARTICLES_OPTIONS: ISourceOptions = {
   id: 'tsparticles',
@@ -92,77 +92,13 @@ const Navbar = memo(function Navbar({ isBarHidden, isMenuOpen, toggleMenu, scrol
   );
 });
 
-function SplashScreen({ onDone }: { onDone: () => void }) {
-  const [bootLines, setBootLines] = useState<string[]>([]);
-  const [bootProgress, setBootProgress] = useState(0);
-  const [fadeOut, setFadeOut] = useState(false);
-  const onDoneRef = useRef(onDone);
-
-  useEffect(() => {
-    const hexChars = '0123456789ABCDEF';
-    const prefixes = ['[kernel]', '[sys]', '[net]', '[gpu]', '[auth]', '[mem]', '[drone]', '[ai]', '[slam]'];
-    let progress = 0;
-
-    const interval = setInterval(() => {
-      if (progress >= 100) { clearInterval(interval); return; }
-      const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
-      const address = '0x' + Array.from({ length: 8 }, () => hexChars[Math.floor(Math.random() * 16)]).join('');
-      setBootLines(prev => {
-        const next = [...prev, `${prefix} Loading block at ${address} ... OK`];
-        return next.length > 25 ? next.slice(-25) : next;
-      });
-      progress += Math.random() * 3;
-      if (progress > 100) progress = 100;
-      setBootProgress(Math.floor(progress));
-    }, 40);
-
-    const t1 = setTimeout(() => setFadeOut(true), 3200);
-    const t2 = setTimeout(() => onDoneRef.current(), 4000);
-    return () => { clearInterval(interval); clearTimeout(t1); clearTimeout(t2); };
-  }, []);
-
-  return (
-    <div className={`splash-screen${fadeOut ? ' fade-out' : ''}`}>
-      <div className="terminal-content">
-        <div className="boot-logs">
-          {bootLines.map((line, i) => <p key={i} className="boot-line">{line}</p>)}
-        </div>
-        {bootProgress > 0 && (
-          <div className="boot-progress-container">
-            <div className="boot-progress-bar" style={{ width: `${bootProgress}%` }} />
-            <div className="boot-progress-text">{bootProgress}%</div>
-          </div>
-        )}
-        <div className="main-boot-messages">
-          {bootProgress > 10  && <p className="cmd">INIT <span className="highlight">SYSTEM_BOOT</span>...</p>}
-          {bootProgress > 30  && <p className="cmd delay-1">LOADING <span className="highlight">KERNEL</span>...</p>}
-          {bootProgress > 50  && <p className="cmd delay-2">MOUNTING <span className="highlight">NEURAL_NET</span> [OK]</p>}
-          {bootProgress > 80  && <p className="cmd delay-3">ESTABLISHING <span className="highlight">CONNECTION</span>...</p>}
-          {bootProgress === 100 && <p className="cmd delay-4">WELCOME, <span className="highlight">GUEST</span>.</p>}
-          {bootProgress === 100 && <p className="cmd blink-cursor delay-5">&gt; ACCESS GRANTED_</p>}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function AppShell() {
   const navigate = useNavigate();
-  const [splashDone, setSplashDone] = useState(false);
   const [isBarHidden, setIsBarHidden] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const lastScrollTop = useRef(0);
   const ticking = useRef(false);
-
-  // Disable scrolling while splash screen is active
-  useEffect(() => {
-    if (!splashDone) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
-  }, [splashDone]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -203,8 +139,6 @@ function AppShell() {
 
   return (
     <>
-      {!splashDone && <SplashScreen onDone={() => setSplashDone(true)} />}
-
       <ParticlesBackground />
 
       <div className="background">
@@ -217,7 +151,7 @@ function AppShell() {
         <Routes>
           <Route path="/home" element={<Home scrollToSection={scrollToSection} />} />
           <Route path="/project/:title" element={<ProjectPage scrollToSection={scrollToSection} />} />
-          <Route path="/paper/:title" element={<PaperPage scrollToSection={scrollToSection} />} />
+          <Route path="/awards/:title" element={<AwardsPage scrollToSection={scrollToSection} />} />
           <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </div>

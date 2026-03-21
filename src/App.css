@@ -58,24 +58,6 @@ a { cursor: pointer; }
   transform: translateY(0);
 }
 
-/* ─── Splash Screen ─────────────────────────────────────────── */
-.splash-screen {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background-color: var(--bg-main);
-  z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.8s ease-in-out, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.splash-screen.fade-out {
-  opacity: 0;
-  transform: scale(1.05);
-  pointer-events: none;
-}
-
 .terminal-content {
   font-family: var(--font-mono);
   color: #fff;
@@ -215,7 +197,7 @@ a { cursor: pointer; }
   .background { background-attachment: scroll; }
 }
 
-/* ─── Back button (shared by ProjectPage / PaperPage) ────────── */
+/* ─── Back button (shared by ProjectPage / AwardsPage) ────────── */
 .backBtn {
   display: flex; align-items: center; gap: 0.5rem;
   background: rgba(255,255,255,0.05);
@@ -228,7 +210,7 @@ a { cursor: pointer; }
 .backBtn img { width: 16px; filter: invert(100%); transform: rotate(90deg); }
 
 /* ─── Mobile ────────────────────────────────────────────────── */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .nav-bar { flex-direction: column; align-items: center; padding: 0 2%; height: auto; width: 100%; }
   .top-bar { flex-direction: row; height: 50px; }
   .hamburger { display: block; }

@@ -58,16 +58,16 @@ export const Career = [
         date: 'Mar 2026 - Present',
         description: 'Website Administrator',
         skills: ['HTML', 'CSS', 'Javascript'], // Add all stacks 
-        image: '/public/assets/details-images/addis.jpg',
+        image: 'assets/details-images/addis.jpg',
     },
     {
         title: 'Intern',
         company: 'Nib International Bank',
         link: 'https://www.nibbanksc.com',
         date: 'Mar 2025 - Present',
-        description: 'Helping in anyway i can',
-        skills: ['File arrangement'],
-        image: '/Portfolio/public/assets/details-images/nib-bank.png',
+        description: 'Shadowed Analytics team, gaining exposure to banking operations and financial data management.',
+        skills: ['Data Analysis'],
+        image: 'assets/details-images/nib-bank.png',
     },
 ];
 
@@ -91,17 +91,42 @@ export const Coursework = {
     ],
 };
 
-export const Papers = [
+export const Awards = [
     {
-        title: 'Python Data Analysis',
-        link: 'python-paper', // Add proper Research paper
-        date: 'May 2025',
+        title: 'Best Delegate',
+        description: 'Maarif MUN Conference · Top 5% of 80+ delegates',
+        link: '/assets/awards/Best.pdf',
+        date: 'May 2024',
+    },
+    {
+        title: 'Outstanding Delegate (2x)',
+        description: 'AIS MUN Conference',
+        link: '/assets/awards/Outstanding.pdf',
+        date: 'Dec 2024 & Dec 2025',
+    },
+    {
+        title: 'Honourable Mention',
+        description: 'AIS MUN Conference',
+        link: '/assets/awards/Honourable.pdf',
+        date: 'Mar 2024',
+    },
+    {
+        title: '3rd Place',
+        description: 'Ideeza Hackathon · 1,000 birr prize for co-founded business club',
+        link: '/assets/awards/3rd.pdf',
+        date: 'Dec 2024 & Dec 2025',
+    },
+    {
+        title: 'Winner, Grade Debate Competition ',
+        description: 'Grades 9 & 10',
+        link: '/assets/awards/Debate.pdf',
+        date: 'April 2023 & April 2024',
     },
 ];
 
 export const Phrases = [
     "Aspiring Quant Developer",
     "Ambitious Student",
-    "Full-Stack Developer",
-    "Funny Guy"
+    "Best Delegate",
+    "Business Club Co-Founder"
 ];

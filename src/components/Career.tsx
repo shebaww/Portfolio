@@ -34,7 +34,7 @@ export default function Career() {
         {CareerData.map((item, i) => (
           <div key={i} className="timeline-entry">
             <div className="timeline-dot" />
-            <img src={item.image} alt="" aria-hidden="true" className="timeline-icon" loading="lazy" />
+            <img  src={`${import.meta.env.BASE_URL}${item.image}`} alt="" aria-hidden="true" className="timeline-icon" loading="lazy" />
             <div className="timeline-content glass">
               <h3>
                 {item.title}

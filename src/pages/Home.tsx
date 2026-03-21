@@ -2,7 +2,7 @@ import { memo } from 'react';
 import Introduction from '../components/Introduction';
 import About from '../components/About';
 import Career from '../components/Career';
-import Papers from '../components/Papers';
+import Awards from '../components/Awards';
 import Projects from '../components/Projects';
 import Coursework from '../components/Coursework';
 import { useMagnetic } from '../hooks/useMagnetic';
@@ -51,7 +51,7 @@ const Home = memo(function Home({ scrollToSection }: HomeProps) {
       <section id="home"><Introduction /></section>
       <section id="about"><About /></section>
       <section id="career"><Career /></section>
-      <section id="papers"><Papers /></section>
+      <section id="awards"><Awards /></section>
       <section id="projects"><Projects /></section>
       <section id="coursework"><Coursework /></section>
 
@@ -76,7 +76,7 @@ const Home = memo(function Home({ scrollToSection }: HomeProps) {
             </MagneticLink>
           </div>
           <div className="footer-bottom">
-            <p className="copyright">© 2026 Nahom Teklemariam.</p>
+            <p className="copyright">© 2026 Nahom Natnael Teklemariam. Certificates issued as Nahom Natnael (Ethiopian naming convention).</p>
             <ScrollTopBtn onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
           </div>
         </div>

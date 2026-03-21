@@ -6,19 +6,19 @@ interface Props {
   scrollToSection: (id: string) => void;
 }
 
-export default function PaperPage({ scrollToSection }: Props) {
+export default function AwardsPage({ scrollToSection }: Props) {
   const { title } = useParams<{ title: string }>();
 
   useEffect(() => { window.scrollTo(0, 0); }, [title]);
 
   return (
-    <div className="page-container">
+    <div className="awards-container">
       <iframe
-        src={`/assets/papers/${title}.pdf`}
+        src={`${title}.pdf`}
         title={title}
         style={{ width: '100%', height: '80vh', border: 'none', borderRadius: '12px' }}
       />
-      <button className="backBtn" onClick={() => scrollToSection('papers')}>
+      <button className="backBtn" onClick={() => scrollToSection('awards')}>
         <img src="/assets/arrow_down.png" alt="" aria-hidden="true" />
         Back
       </button>

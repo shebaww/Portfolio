@@ -6,7 +6,7 @@ import './Home.css';
 // Lazy load components that are below the fold
 const About = lazy(() => import('./components/About'));
 const Career = lazy(() => import('./components/Career'));
-const Papers = lazy(() => import('./components/Papers'));
+const Awards = lazy(() => import('./components/Awards'));
 const Projects = lazy(() => import('./components/Projects'));
 const Coursework = lazy(() => import('./components/Coursework'));
 
@@ -67,7 +67,7 @@ export default function Home({ scrollToSection }: HomeProps) {
       </Suspense>
       
       <Suspense fallback={<SectionLoader />}>
-        <section id="papers"><Papers /></section>
+        <section id="awards"><Awards /></section>
       </Suspense>
       
       <Suspense fallback={<SectionLoader />}>
@@ -99,7 +99,7 @@ export default function Home({ scrollToSection }: HomeProps) {
             </MagneticLink>
           </div>
           <div className="footer-bottom">
-            <p className="copyright">© 2026 Nahom Teklemariam.</p>
+            <p className="copyright">© 2026 Nahom Natnael Teklemariam. Certificates issued as Nahom Natnael (Ethiopian naming convention).</p>
             <ScrollTopBtn onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
           </div>
         </div>
