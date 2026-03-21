@@ -62,7 +62,7 @@ const Home = memo(function Home({ scrollToSection }: HomeProps) {
             Let's build something <br /><span className="gradient-text-amazing">amazing</span> together.
           </h1>
           <p className="footer-subtext">
-            Always open for new opportunities and collaborations in robotics and AI.
+            Always open for new opportunities and collaborations.
           </p>
           <div className="footer-links">
             <MagneticLink href="mailto:nahomnatnael87@gmail.com" className="footer-btn primary-btn">
