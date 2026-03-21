@@ -13,7 +13,7 @@ return (
  <h1 ref={revealRef as React.Ref<HTMLHeadingElement>}>About Me</h1>
 <p>
         I'm a 16-year-old student in Ethiopia with a deep passion for 
-        mathematics, programming, and quantitative finance. Currently pursuing self-study in Linear Algebra and Calculus I subjects 
+        mathematics, programming, and quantitative finance. Currently pursuing self-study in Linear Algebra and Calculus I. The subjects 
         I believe form the foundation of any serious quantitative work.
       </p>
       <p>
