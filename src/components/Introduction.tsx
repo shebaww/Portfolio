@@ -118,12 +118,12 @@ export default function Introduction() {
             {currentPhrase}
           </h2>
           <p className="animate-slide-up description" style={{ animationDelay: '0.6s' }}>
-            Welcome to my portfolio! I build Full-Stack Websites and Algorithm Trading Scripts.
+            Welcome to my portfolio! I'm a passionate 16 year old that builds Full-Stack Websites and Algorithm Trading Scripts.
           </p>
 
           <div className="button-container animate-slide-up" style={{ animationDelay: '0.8s' }}>
-            <SocialBtn href="https://www.linkedin.com" src="assets/linkedin-icon.png" alt="LinkedIn Profile" />
-            <SocialBtn href="https://github.com/shebaww?tab=repositories" src="assets/github-icon.png" alt="GitHub Profile" />
+            <SocialBtn href="https://www.linkedin.com/in/nahom-teklemariam-0652533b9" src="assets/linkedin-icon.png" alt="LinkedIn Profile" />
+            <SocialBtn href="https://github.com/shebaww" src="assets/github-icon.png" alt="GitHub Profile" />
             <SocialBtn href="mailto:nahomnatnael87@gmail.com@gmail.com" src="assets/mail-icon.png" alt="Email Address" />
           </div>
 

@@ -232,5 +232,6 @@
   .content-wrapper { flex-direction: column; text-align: center; gap: 3rem; padding-top: 80px; }
   .right-side { align-items: center; }
   .description { text-align: center; }
+  .scroll-indicator {display: none;}
   .image-container { max-width: 280px; }
 }

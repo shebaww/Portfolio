@@ -65,13 +65,13 @@ const Home = memo(function Home({ scrollToSection }: HomeProps) {
             Always open for new opportunities and collaborations in robotics and AI.
           </p>
           <div className="footer-links">
-            <MagneticLink href="mailto:evangoldman10@gmail.com" className="footer-btn primary-btn">
+            <MagneticLink href="mailto:nahomnatnael87@gmail.com" className="footer-btn primary-btn">
               <img src="assets/mail-icon.png" alt="" aria-hidden="true" className="btn-icon invert-icon" /> Say Hello
             </MagneticLink>
-            <MagneticLink href="https://www.linkedin.com/in/egold018/" className="footer-btn secondary-btn">
+            <MagneticLink external href="https://linkedin.com/in/nahom-teklemariam-0652533b9" className="footer-btn secondary-btn">
               <img src="assets/linkedin-icon.png" alt="" aria-hidden="true" className="btn-icon invert-icon" /> LinkedIn
             </MagneticLink>
-            <MagneticLink href="https://github.com/egold010?tab=repositories" className="footer-btn secondary-btn">
+            <MagneticLink href="https://github.com/shebaww" className="footer-btn secondary-btn">
               <img src="assets/github-icon.png" alt="" aria-hidden="true" className="btn-icon invert-icon" /> GitHub
             </MagneticLink>
           </div>

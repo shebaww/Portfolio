@@ -91,10 +91,10 @@ export default function Home({ scrollToSection }: HomeProps) {
             <MagneticLink href="mailto:nahomnatnael87@gmail.com" className="footer-btn primary-btn">
               <img src="assets/mail-icon.png" alt="" aria-hidden="true" className="btn-icon invert-icon" /> Say Hello
             </MagneticLink>
-            <MagneticLink href="null" className="footer-btn secondary-btn">
+            <MagneticLink external href="https://linkedin.com/in/nahom-teklemariam-0652533b9" className="footer-btn secondary-btn">
               <img src="assets/linkedin-icon.png" alt="" aria-hidden="true" className="btn-icon invert-icon" /> LinkedIn
             </MagneticLink>
-            <MagneticLink href="https://github.com/shebaww?tab=repositories" className="footer-btn secondary-btn">
+            <MagneticLink href="https://github.com/shebaww" className="footer-btn secondary-btn">
               <img src="assets/github-icon.png" alt="" aria-hidden="true" className="btn-icon invert-icon" /> GitHub
             </MagneticLink>
           </div>
