@@ -12,7 +12,7 @@ export default function Coursework() {
         <div className="course-category glass glow-on-hover">
           <div className="category-header">
             <h3>HighSchool</h3>
-            <div className="badge">MS</div>
+            <div className="badge">hS</div>
           </div>
           <ul>
             {CourseworkData.graduate.map(c => <li key={c}>{c}</li>)}
@@ -21,7 +21,7 @@ export default function Coursework() {
         <div className="course-category glass glow-on-hover">
           <div className="category-header">
             <h3>Independent Study</h3>
-            <div className="badge">BS</div>
+            <div className="badge">IS</div>
           </div>
           <ul>
             {CourseworkData.undergrad.map(c => <li key={c}>{c}</li>)}
