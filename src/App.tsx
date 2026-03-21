@@ -73,7 +73,7 @@ const Navbar = memo(function Navbar({ isBarHidden, isMenuOpen, toggleMenu, scrol
     <div className={`nav-bar${isBarHidden ? ' hidden' : ''}`} role="navigation" aria-label="Main Navigation">
       <div className="top-bar">
         <h3 className="name-header">
-          Nahom Telkemariam
+          Nahom N. Telkemariam
         </h3>
         <button className="hamburger" onClick={toggleMenu} aria-label="Toggle navigation menu" aria-expanded={isMenuOpen}>
           &#9776;
