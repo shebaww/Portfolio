@@ -42,6 +42,24 @@ a { cursor: pointer; }
   background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.gradient-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  border-radius: 12px;
+  height: 4px;
+  width: 0;
+  background: var(--primary-gradient);
+  transition: width 0.3s ease;
+}
+
+.gradient-text:hover::after {
+  width: 100%;
 }
 
 .gradient-text-amazing {
