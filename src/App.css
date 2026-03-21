@@ -44,6 +44,8 @@ a { cursor: pointer; }
   -webkit-text-fill-color: transparent;
   position: relative;
   display: inline-block;
+  cursor: pointer;
+  user-select: none;
 }
 
 .gradient-text::after {

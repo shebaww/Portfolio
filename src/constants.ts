@@ -64,7 +64,7 @@ export const Career = [
         title: 'Intern',
         company: 'Nib International Bank',
         link: 'https://www.nibbanksc.com',
-        date: 'Mar 2025 - Present',
+        date: 'Mar 2026 - Present',
         description: 'Shadowed Analytics team, gaining exposure to banking operations and financial data management.',
         skills: ['Data Analysis'],
         image: 'assets/details-images/nib-bank.png',
