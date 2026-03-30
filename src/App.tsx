@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback, memo } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
+import Layout from './components/Layout';
 import { loadSlim } from '@tsparticles/slim';
 import type { ISourceOptions } from '@tsparticles/engine';
 import Home from './pages/Home';
@@ -149,7 +150,10 @@ function AppShell() {
           scrollToSection={scrollToSection}
         />
         <Routes>
-          <Route path="/home" element={<Home scrollToSection={scrollToSection} />} />
+          <Route 
+          path="/home" 
+          element={<Home scrollToSection={scrollToSection} />}
+          />
           <Route path="/project/:title" element={<ProjectPage scrollToSection={scrollToSection} />} />
           <Route path="/awards/:title" element={<AwardsPage scrollToSection={scrollToSection} />} />
           <Route path="*" element={<Navigate to="/home" replace />} />
