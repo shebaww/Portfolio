@@ -11,10 +11,13 @@ export default function AwardsPage({ scrollToSection }: Props) {
 
   useEffect(() => { window.scrollTo(0, 0); }, [title]);
 
+  // Fix: Build the correct path to the PDF
+  const pdfPath = `/assets/awards/${title}.pdf`;
+
   return (
     <div className="awards-container">
       <iframe
-        src={`${title}.pdf`}
+        src={pdfPath}
         title={title}
         style={{ width: '100%', height: '80vh', border: 'none', borderRadius: '12px' }}
       />

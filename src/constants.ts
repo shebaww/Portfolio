@@ -95,31 +95,31 @@ export const Awards = [
     {
         title: 'Best Delegate',
         description: 'Maarif MUN Conference · Top 5% of 80+ delegates',
-        link: 'nahomtmariam.com/assets/awards/Best.pdf',
+        link: '/assets/awards/Best.pdf',
         date: 'May 2024',
     },
     {
         title: 'Outstanding Delegate (2x)',
         description: 'AIS MUN Conference',
-        link: 'nahomtmariam.com/assets/awards/Outstanding.pdf',
+        link: '/assets/awards/Outstanding.pdf',
         date: 'Dec 2024 & Dec 2025',
     },
     {
         title: 'Honourable Mention',
         description: 'AIS MUN Conference',
-        link: 'nahomtmariam.com/assets/awards/Honourable.pdf',
+        link: '/assets/awards/Honourable.pdf',
         date: 'Mar 2024',
     },
     {
         title: '3rd Place',
         description: 'Ideeza Hackathon · 1,000 birr prize for co-founded business club',
-        link: 'nahomtmariam.com/assets/awards/3rd.pdf',
+        link: '/assets/awards/3rd.pdf',
         date: 'Dec 2024 & Dec 2025',
     },
     {
         title: 'Winner, Grade Debate Competition ',
         description: 'Grades 9 & 10',
-        link: 'nahomtmariam.com/assets/awards/Debate.pdf',
+        link: '/assets/awards/Debate.pdf',
         date: 'April 2023 & April 2024',
     },
 ];
