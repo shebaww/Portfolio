@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
 import { useTilt } from '../hooks/useTilt';
 import { useMagnetic } from '../hooks/useMagnetic';
@@ -8,10 +7,9 @@ import './Awards.css';
 function AwardsCard({ awards, index }: { awards: typeof AwardsData[0]; index: number }) {
   const { ref: tiltRef, onMouseMove, onMouseLeave } = useTilt(3);
   const { ref: magRef, onMouseMove: magMove, onMouseLeave: magLeave } = useMagnetic(0.4);
-  const navigate = useNavigate();
-
-  // Build the full PDF URL
-  const pdfUrl = `${import.meta.env.BASE_URL}${awards.link}`;
+  
+  // Direct absolute URL to your PDFs
+  const pdfUrl = `https://nahomtmariam.com${awards.link}`;
 
   return (
     <div
@@ -22,18 +20,12 @@ function AwardsCard({ awards, index }: { awards: typeof AwardsData[0]; index: nu
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="awards-content">
-        {/* Make title click open PDF in new tab */}
-        <a 
-          href={pdfUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ cursor: 'pointer', textDecoration: 'none', display: 'block' }}
-        >
           <h3>{awards.title}</h3>
           <p>{awards.description}</p>
-        </a>
         <span className="date">{awards.date}</span>
       </div>
+      
+      {/* View Certificate button - opens same PDF */}
       <a
         href={pdfUrl}
         target="_blank"
@@ -43,7 +35,7 @@ function AwardsCard({ awards, index }: { awards: typeof AwardsData[0]; index: nu
         onMouseMove={magMove}
         onMouseLeave={magLeave}
       >
-        View Certificates
+        View Certificate
       </a>
     </div>
   );
@@ -56,7 +48,9 @@ export default function Awards() {
     <div className="awards-container">
       <h1 ref={revealRef as React.Ref<HTMLHeadingElement>}>Awards</h1>
       <div className="awards-grid">
-        {AwardsData.map((awards, i) => <AwardsCard key={awards.link} awards={awards} index={i} />)}
+        {AwardsData.map((awards, i) => (
+          <AwardsCard key={awards.link} awards={awards} index={i} />
+        ))}
       </div>
     </div>
   );
