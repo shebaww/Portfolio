@@ -10,6 +10,9 @@ function AwardsCard({ awards, index }: { awards: typeof AwardsData[0]; index: nu
   const { ref: magRef, onMouseMove: magMove, onMouseLeave: magLeave } = useMagnetic(0.4);
   const navigate = useNavigate();
 
+  // Build the full PDF URL
+  const pdfUrl = `${import.meta.env.BASE_URL}${awards.link}`;
+
   return (
     <div
       className="awards-card glass glow-on-hover"
@@ -19,13 +22,20 @@ function AwardsCard({ awards, index }: { awards: typeof AwardsData[0]; index: nu
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="awards-content">
-        <a onClick={() => navigate(`${awards.link}`)} style={{ cursor: 'pointer' }}>
-          <h3>{awards.title}</h3><p>{awards.description}</p>
+        {/* Make title click open PDF in new tab */}
+        <a 
+          href={pdfUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ cursor: 'pointer', textDecoration: 'none', display: 'block' }}
+        >
+          <h3>{awards.title}</h3>
+          <p>{awards.description}</p>
         </a>
         <span className="date">{awards.date}</span>
       </div>
       <a
-        href={`${import.meta.env.BASE_URL}${awards.link}`}
+        href={pdfUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="awards-link-btn"
