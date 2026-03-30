@@ -161,7 +161,7 @@ function AppShell() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/Portfolio">
+    <BrowserRouter>
       <AppShell />
     </BrowserRouter>
   );
