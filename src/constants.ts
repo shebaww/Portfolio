@@ -46,6 +46,15 @@ export const Projects: CardItem[] = [
         link: "https://andinet-newspaper.netlify.app",
     },
     {
+        title: "Addis Asqual Website",
+        description: "I maintained the Addis Asqual Wesbite during my internship, debugged runtime errors, fixed chache issues, fixed cookie issues and expanded their viisibility using modern Search Engine Optimization.",
+        category: "Software",
+        date: "03/06/2026",
+        relevant: true,
+        skills: ["Front-end", "TailwindCSS", "React", "SEO", "Backend"],
+        link: "https://asqualaddis.com",
+    },
+    {
         title: "Website",
         description: "I made this website using React to act as a professional portfolio.",
         category: "General SW",
