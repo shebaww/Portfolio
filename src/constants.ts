@@ -37,6 +37,15 @@ export const Projects: CardItem[] = [
         link: "https://github.com/shebaww/Nexus-AI",
     },
     {
+        title: "The Andinet Website",
+        description: "I built Andinet Newspaper to serve as a digital news hub, lightweight, fast, and accessible to readers on any device. The site reflects a commitment to clean design and functional content presentation, making it ideal for sharing Ethiopian news, culture, and diaspora stories. Hosted on Netlify, it loads quickly and scales easily as readership grows.",
+        category: "Software",
+        date: "03/02/2026",
+        relevant: true,
+        skills: ["Front-end", "TailwindCSS", "React", "Firebase", "SEO"],
+        link: "https://andinet-newspaper.netlify.app",
+    },
+    {
         title: "Website",
         description: "I made this website using React to act as a professional portfolio.",
         category: "General SW",
@@ -121,6 +130,12 @@ export const Awards = [
         description: 'Grades 9 & 10',
         link: '/assets/awards/Debate.pdf',
         date: 'April 2023 & April 2024',
+    },
+    {
+        title: 'Science Fair Coordinator',
+        description: 'Certificate of Appreciation',
+        link: '/assets/awards/Science.pdf',
+        date: 'April 2026',
     },
 ];
 
