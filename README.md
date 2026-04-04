@@ -4,7 +4,7 @@
 [![Built with React](https://img.shields.io/badge/Built%20with-React-blue)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind-06B6D4)](https://tailwindcss.com/)
 
-![Portfolio Screenshot](./public/assets/screenshot.png) 
+![Portfolio Screenshot](./public/assets/screenshot.png)
 
 ## 🚀 About Me
 
@@ -16,7 +16,7 @@ I'm **Nahom Teklemariam**, a front-end developer who loves building interactive,
 - **Tailwind CSS** – Utility-first styling  
 - **JavaScript (ES6+)** – Logic & interactivity  
 - **HTML5 & CSS3** – Semantic markup & custom animations  
-- **3D Animations** – (Three.js / React Three Fiber & WebGL)
+- **3D Animations** – Three.js / React Three Fiber & WebGL
 
 ## ✨ Features
 
@@ -42,30 +42,35 @@ npm install
 
 # Start the development server
 npm run dev
-Then open http://localhost:5173 (or the port shown in your terminal).
 ```
-📁 Featured Projects
-1. Andinet Newspaper Website
-🔗 ![andinet-newspaper.netlify.app](url'andinet-newspaper.netlfiy.app') 
+
+Then open `http://localhost:5173` (or the port shown in your terminal).
+
+## 📁 Featured Projects
+
+### 1. Andinet Newspaper Website
+🔗 [andinet-newspaper.netlify.app](https://andinet-newspaper.netlify.app)
+
 A digital newspaper platform built for a school club, featuring article layout, categories, and responsive design.
 
-2. Business Club Website
-🔗 ![Business Club Wesbite](https://shebaww.github.io/Business_Club_Website)
+### 2. Business Club Website
+🔗 [Business Club Website](https://shebaww.github.io/Business_Club_Website)
+
 Official site for a school business club – includes event info, team profiles, and contact section.
 
-3. iPod File Converter
-(Custom tool for iPod file conversion)
-🔗 ![Ipod-Converter]("url'https://github.com/shebaww/Ipod-Converter'")
-A utility I built to convert media files for compatibility with my iPod, demonstrates problem-solving and file-handling logic.
+### 3. iPod File Converter
+🔗 [iPod Converter](https://github.com/shebaww/Ipod-Converter)
 
-More projects available on the portfolio live site.
+A utility I built to convert media files for compatibility with my iPod. Demonstrates problem-solving and file-handling logic.
 
-📬 Contact
+> More projects available on the [live portfolio site](https://nahomtmariam.com).
 
-Live Website: ![nahomtmariam.com](url'https://nahomtmariam.com') 
+## 📬 Contact
 
-GitHub: ![github.com/shebaww](url'https://github.com/shebaww') 
+- **Live Website:** [nahomtmariam.com](https://nahomtmariam.com)
+- **GitHub:** [github.com/shebaww](https://github.com/shebaww)
+- **Email:** [nahomnatnael87@gmail.com](mailto:nahomnatnael87@gmail.com)
 
-Email: ![nahomnatnael87@gmail.com](mailto:nahomnatnael87@gmail.com) 
+---
 
-Built by Nahom Teklemariam
+*Built with 💻 by Nahom Teklemariam*
