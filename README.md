@@ -43,7 +43,7 @@ npm install
 # Start the development server
 npm run dev
 Then open http://localhost:5173 (or the port shown in your terminal).
-
+```bash
 📁 Featured Projects
 1. Andinet Newspaper Website
 🔗 andinet-newspaper.netlify.app
