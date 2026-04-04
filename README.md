@@ -63,8 +63,8 @@ More projects available on the portfolio live site.
 📬 Contact
 Website: nahomtmariam.com
 
-GitHub: github.com/shebaww (replace with yours)
+GitHub: github.com/shebaww
 
-Email: nahomnatnael87@gmail.com (replace with actual)
+Email: nahomnatnael87@gmail.com
 
 Built by Nahom Teklemariam
