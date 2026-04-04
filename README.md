@@ -8,7 +8,7 @@
 
 ## 🚀 About Me
 
-I'm **Nahom Teklemariam**, a front-end developer who loves building interactive, animated web experiences. This portfolio showcases my work — from club websites and a newspaper platform to a custom file converter for my iPod.
+I'm **Nahom Teklemariam**, a front-end developer who loves building interactive, animated web experiences. This portfolio showcases my work from club websites and a newspaper platform to a custom file converter for my iPod.
 
 ## 🛠️ Tech Stack
 
@@ -16,7 +16,7 @@ I'm **Nahom Teklemariam**, a front-end developer who loves building interactive,
 - **Tailwind CSS** – Utility-first styling  
 - **JavaScript (ES6+)** – Logic & interactivity  
 - **HTML5 & CSS3** – Semantic markup & custom animations  
-- **3D Animations** – (Three.js / React Three Fiber – add specifics if used)
+- **3D Animations** – (Three.js / React Three Fiber & WebGL)
 
 ## ✨ Features
 
@@ -32,10 +32,10 @@ To run this portfolio locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/your-portfolio-repo.git
+git clone https://github.com/shebaww/Portfolio.git
 
 # Navigate to the project folder
-cd your-portfolio-repo
+cd Portfolio
 
 # Install dependencies
 npm install
@@ -55,27 +55,16 @@ Official site for a school business club – includes event info, team profiles,
 
 3. iPod File Converter
 (Custom tool for iPod file conversion)
-A utility I built to convert media files for compatibility with my iPod – demonstrates problem-solving and file-handling logic.
+🔗 github.com/shebaww/Ipod-Converter
+A utility I built to convert media files for compatibility with my iPod, demonstrates problem-solving and file-handling logic.
 
 More projects available on the portfolio live site.
-
-📸 Screenshots
-Add your screenshots here:
-
-https://./screenshots/home.png
-Homepage with 3D animation
-
-https://./screenshots/projects.png
-Projects showcase
-
-https://./screenshots/mobile.png
-Responsive layout on mobile
 
 📬 Contact
 Website: nahomtmariam.com
 
-GitHub: github.com/yourusername (replace with yours)
+GitHub: github.com/shebaww (replace with yours)
 
-Email: your.email@example.com (replace with actual)
+Email: nahomnatnael87@gmail.com (replace with actual)
 
-Built with 💻 by Nahom Teklemariam
+Built by Nahom Teklemariam
