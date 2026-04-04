@@ -104,7 +104,7 @@ export default function Introduction() {
         <div className="left-side">
           <div className="image-container">
             <div className="hologram-overlay" />
-            <img src="assets/nahom1.jpg" alt="Nahom Natnael Headshot" className="animate-fade-in" />
+            <img src="assets/nahom.jpg" alt="Nahom Natnael Headshot" className="animate-fade-in" />
             <div className="image-glow" />
           </div>
         </div>
