@@ -4,7 +4,7 @@
 [![Built with React](https://img.shields.io/badge/Built%20with-React-blue)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind-06B6D4)](https://tailwindcss.com/)
 
-![Portfolio Screenshot](./public/assets/screenshot.png) <!-- Replace with your actual screenshot -->
+![Portfolio Screenshot](./public/assets/screenshot.png) 
 
 ## 🚀 About Me
 
@@ -46,25 +46,26 @@ Then open http://localhost:5173 (or the port shown in your terminal).
 ```
 📁 Featured Projects
 1. Andinet Newspaper Website
-🔗 andinet-newspaper.netlify.app
+🔗 ![andinet-newspaper.netlify.app](url'andinet-newspaper.netlfiy.app') 
 A digital newspaper platform built for a school club, featuring article layout, categories, and responsive design.
 
 2. Business Club Website
-🔗 shebaww.github.io/Business_Club_Website
+🔗 ![Business Club Wesbite](https://shebaww.github.io/Business_Club_Website)
 Official site for a school business club – includes event info, team profiles, and contact section.
 
 3. iPod File Converter
 (Custom tool for iPod file conversion)
-🔗 github.com/shebaww/Ipod-Converter
+🔗 ![Ipod-Converter]("url'https://github.com/shebaww/Ipod-Converter'")
 A utility I built to convert media files for compatibility with my iPod, demonstrates problem-solving and file-handling logic.
 
 More projects available on the portfolio live site.
 
 📬 Contact
-Website: nahomtmariam.com
 
-GitHub: github.com/shebaww
+Live Website: ![nahomtmariam.com](url'https://nahomtmariam.com') 
 
-Email: nahomnatnael87@gmail.com
+GitHub: ![github.com/shebaww](url'https://github.com/shebaww') 
+
+Email: ![nahomnatnael87@gmail.com](mailto:nahomnatnael87@gmail.com) 
 
 Built by Nahom Teklemariam
