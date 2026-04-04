@@ -4,7 +4,7 @@
 [![Built with React](https://img.shields.io/badge/Built%20with-React-blue)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind-06B6D4)](https://tailwindcss.com/)
 
-![Portfolio Screenshot](./screenshot.png) <!-- Replace with your actual screenshot -->
+![Portfolio Screenshot](./public/assets/screenshot.png) <!-- Replace with your actual screenshot -->
 
 ## 🚀 About Me
 
