@@ -113,7 +113,7 @@ export default function Introduction() {
             <SocialBtn href="mailto:nahomnatnael87@gmail.com" src="assets/mail-icon.png" alt="Email Address" />
           </div>
 
-         <MagneticLink href="" className="resume-btn">               <img src="assets/download.svg" alt="" aria-hidden="true" className="btn-icon invert-icon" /> Download Resume
+         <MagneticLink href="assets/resume.pdf" className="resume-btn">               <img src="assets/download.svg" alt="" aria-hidden="true" className="btn-icon invert-icon" /> Download Resume
              </MagneticLink>
       </div>
         </div>
