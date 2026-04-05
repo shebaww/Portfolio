@@ -1,0 +1,64 @@
+{
+  "hash": "5c28a7e8",
+  "configHash": "cb40a709",
+  "lockfileHash": "f3a5141a",
+  "browserHash": "f907d218",
+  "optimized": {
+    "@tsparticles/react": {
+      "src": "../../node_modules/@tsparticles/react/dist/index.js",
+      "file": "@tsparticles_react.js",
+      "fileHash": "977b188b",
+      "needsInterop": false
+    },
+    "@tsparticles/slim": {
+      "src": "../../node_modules/@tsparticles/slim/browser/index.js",
+      "file": "@tsparticles_slim.js",
+      "fileHash": "339d6b2e",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4988493c",
+      "needsInterop": true
+    },
+    "react-helmet-async": {
+      "src": "../../node_modules/react-helmet-async/lib/index.esm.js",
+      "file": "react-helmet-async.js",
+      "fileHash": "ffa6fd39",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "e5bc77e7",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "acdfc489",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "1698e98c",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "browser-geOj_FPZ": {
+      "file": "browser-geOj_FPZ.js",
+      "isDynamicEntry": false
+    },
+    "react-TUYU05Ph": {
+      "file": "react-TUYU05Ph.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-DMGCgcj7": {
+      "file": "react-dom-DMGCgcj7.js",
+      "isDynamicEntry": false
+    }
+  }
+}
