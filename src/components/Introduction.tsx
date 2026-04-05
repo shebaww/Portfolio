@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
+import '../pages/Home.css';
+import MagneticLink from '../components/MagneticLink';
 import { useMagnetic } from '../hooks/useMagnetic';
 import { Phrases } from '../constants';
 import './Introduction.css';
@@ -20,7 +22,22 @@ function SocialBtn({ href, src, alt }: { href: string; src: string; alt: string 
     </a>
   );
 }
-
+function MagneticLink({ href, className, children }: { href: string; className: string; children: React.ReactNode }) {
+  const { ref, onMouseMove, onMouseLeave } = useMagnetic(0.5);
+  return (
+      <a
+        href={href}
+        target={href.startsWith('mailto') ? undefined : '_blank'}
+        rel="noopener noreferrer"
+        className={className}
+        ref={ref as React.Ref<HTMLAnchorElement>}
+        onMouseMove={onMouseMove}
+        onMouseLeave={onMouseLeave}
+      >
+        {children}
+      </a>
+    );
+  }
 export default function Introduction() {
   const [currentPhrase, setCurrentPhrase] = useState('');
   const [terminalHistory, setTerminalHistory] = useState<{ text: string; type: string }[]>([]);
@@ -93,13 +110,15 @@ export default function Introduction() {
           <div className="button-container animate-slide-up" style={{ animationDelay: '0.8s' }}>
             <SocialBtn href="https://www.linkedin.com/in/nahom-teklemariam-0652533b9" src="assets/linkedin-icon.png" alt="LinkedIn Profile" />
             <SocialBtn href="https://github.com/shebaww" src="assets/github-icon.png" alt="GitHub Profile" />
-            <SocialBtn href="mailto:nahomnatnael87@gmail.com@gmail.com" src="assets/mail-icon.png" alt="Email Address" />
+            <SocialBtn href="mailto:nahomnatnael87@gmail.com" src="assets/mail-icon.png" alt="Email Address" />
           </div>
 
-        </div>
+         <MagneticLink href="" className="resume-btn">               <img src="assets/download.svg" alt="" aria-hidden="true" className="btn-icon invert-icon" /> Download Resume
+             </MagneticLink>
       </div>
+        </div>
 
-      <div className="scroll-indicator animate-fade-in" style={{ animationDelay: '0,5s' }}>
+      <div className="scroll-indicator animate-fade-in" style={{ animationDelay: '0.5s' }}>
         <img src="assets/arrow_down.png" alt="Scroll Down" aria-hidden="true" className="animate-bounce" />
       </div>
     </div>

@@ -216,12 +216,12 @@
   font-family: var(--font-mono);
 }
  .resume-btn {
+   align-items: center;
    padding: 1rem 2rem;
+   margin-top: 10px;
    border-radius: 12px;
    font-size: 1.1rem;
    font-weight: 600;
-   max-width: 300px;
-   margin: 30px 0;
    transition: all 0.3s ease;
    text-decoration: none;
    background: var(--primary-gradient);
