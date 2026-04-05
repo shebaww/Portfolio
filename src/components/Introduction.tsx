@@ -55,13 +55,6 @@ export default function Introduction() {
     return () => { clearTimeout(startTimeout); clearTimeout(timeoutId); };
   }, []);
 
-  // Initial terminal hint
-  useEffect(() => {
-    const t = setTimeout(() => {
-      setTerminalHistory([{ text: 'Type "help" to see available commands.', type: 'info' }]);
-    }, 2000);
-    return () => clearTimeout(t);
-  }, []);
 
   const scrollToBottom = () => {
     setTimeout(() => {
@@ -70,30 +63,6 @@ export default function Introduction() {
     }, 10);
   };
 
-  const processCommand = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key !== 'Enter') return;
-    const cmd = (e.target as HTMLInputElement).value.trim();
-    (e.target as HTMLInputElement).value = '';
-    if (!cmd) return;
-
-    setTerminalHistory(prev => [...prev, { text: cmd, type: 'input' }]);
-    const lower = cmd.toLowerCase();
-
-    setTimeout(() => {
-      let response: { text: string; type: string };
-      if (lower === 'help')         response = { text: 'Available commands: whoami, skills, projects, contact, clear, sudo', type: 'info' };
-      else if (lower === 'whoami')  response = { text: 'Nahom Teklemariam. Full Stack Web developer, Algorithmic Trader and Highschool Student', type: 'success' };
-      else if (lower === 'skills')  response = { text: '> Python, C, Front-end, Back-end, SQL, React', type: 'success' };
-      else if (lower === 'contact') response = { text: 'Email: nahomnatnael87@gmail.com', type: 'success' };
-      else if (lower === 'projects')response = { text: 'Scroll down to view my projects.', type: 'info' };
-      else if (lower === 'clear')   { setTerminalHistory([]); return; }
-      else if (lower.startsWith('sudo')) response = { text: 'nahom is not in the sudoers file. This incident will be reported.', type: 'error' };
-      else response = { text: `zsh: command not found: ${cmd}`, type: 'error' };
-
-      setTerminalHistory(prev => [...prev, response]);
-      scrollToBottom();
-    }, 150);
-  };
 
   return (
     <div className="intro-container">
@@ -127,39 +96,10 @@ export default function Introduction() {
             <SocialBtn href="mailto:nahomnatnael87@gmail.com@gmail.com" src="assets/mail-icon.png" alt="Email Address" />
           </div>
 
-          {/* Interactive Terminal */}
-          <div className="hero-console animate-slide-up" style={{ animationDelay: '1.1s' }} onClick={() => inputRef.current?.focus()}>
-            <div className="console-header">
-              <span className="dot red" /><span className="dot yellow" /><span className="dot green" />
-              <span className="console-title">zsh — nahom@portfolio</span>
-            </div>
-            <div className="console-body" ref={consoleBodyRef}>
-              <p className="console-line"><span className="prompt">~ %</span> ./init_autonomous_agent.sh</p>
-              <p className="console-line success">[OK] Sensors Calibrated</p>
-              <p className="console-line success">[OK] Neural Network Loaded</p>
-              {terminalHistory.map((line, i) => (
-                <p key={i} className={`console-line ${line.type}`}>
-                  {line.type === 'input' && <span className="prompt">~ %</span>}
-                  <span>{line.text}</span>
-                </p>
-              ))}
-              <div className="console-input-wrapper">
-                <span className="prompt">~ %</span>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  className="console-input"
-                  onKeyDown={processCommand}
-                  autoComplete="off"
-                  spellCheck={false}
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
-      <div className="scroll-indicator animate-fade-in" style={{ animationDelay: '1.5s' }}>
+      <div className="scroll-indicator animate-fade-in" style={{ animationDelay: '0,5s' }}>
         <img src="assets/arrow_down.png" alt="Scroll Down" aria-hidden="true" className="animate-bounce" />
       </div>
     </div>
