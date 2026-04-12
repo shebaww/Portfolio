@@ -99,13 +99,12 @@ export const Coursework = {
         'ICT',
     ],
     undergrad: [
-        'Linear Algebra I',
-        'Calculus I',
+        'Linear Algebra for ML',
+        'Calculus I-TTT',
         'Harvard - CS50 - Introduction to Computer Science',
         'Website Development - freecodecamp',
-        'Python for Data Analysis',
-        'React Native',
-        'Backend Website Development', // Finish and link everything you wrote and plan to write and other courses
+        'Python',
+        'Firebase'
     ],
 };
 

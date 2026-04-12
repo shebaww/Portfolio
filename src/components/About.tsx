@@ -13,7 +13,7 @@ return (
  <h1 ref={revealRef as React.Ref<HTMLHeadingElement>}>About Me</h1>
 <p>
         I'm a 16-year-old student in Ethiopia with a deep passion for 
-        mathematics, programming, and quantitative finance. Currently pursuing self-study in Linear Algebra and Calculus I. The subjects 
+        mathematics, programming, and quantitative finance. Currently pursuing self-study in Linear Algebra and Calculus I-III. The subjects 
         I believe form the foundation of any serious quantitative work.
       </p>
       <p>
@@ -32,8 +32,7 @@ return (
         leadership means building things that last.
       </p>
       <p>
-        I'm currently working through Harvard's CS50, preparing for hackathons 
-        (including MLH Ethiopia 2026), and documenting everything on GitHub. My 
+        I'm currently working through Harvard's CS50, preparing for future hackathons and documenting everything on GitHub. My 
         long-term vision involves quantitative research, building intelligent 
         systems, and eventually contributing to open-source projects that matter.
       </p>
