@@ -108,7 +108,7 @@ export default function Introduction() {
           </p>
 
           <div className="button-container animate-slide-up" style={{ animationDelay: '0.8s' }}>
-            <SocialBtn href="https://www.linkedin.com/in/nahom-teklemariam-0652533b9" src="assets/linkedin-icon.png" alt="LinkedIn Profile" />
+            <SocialBtn href="https://www.linkedin.com/in/nahomtmariam" src="assets/linkedin-icon.png" alt="LinkedIn Profile" />
             <SocialBtn href="https://github.com/shebaww" src="assets/github-icon.png" alt="GitHub Profile" />
             <SocialBtn href="mailto:nahomnatnael87@gmail.com" src="assets/mail-icon.png" alt="Email Address" />
           </div>

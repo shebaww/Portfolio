@@ -61,6 +61,13 @@ export const Projects: CardItem[] = [
         date: "3/19/2026"
     },
     {
+        title: "Portfolio Website for my Sister",
+        description: "I made a proffesional portoflio website for my sister using React.",
+        category: "General SW",
+        date: "4/28/2026",
+        link: "https://shebaww.github.io/biluPortfolio"
+    },
+    {
         title: "3D Modeling with blender",
         description: "Created various 3d models in blender mainly for use in game development.",
         category: "Game Dev",
@@ -100,7 +107,7 @@ export const Coursework = {
     ],
     undergrad: [
         'Linear Algebra for ML',
-        'Calculus I-TTT',
+        'Calculus I-III',
         'Harvard - CS50 - Introduction to Computer Science',
         'Website Development - freecodecamp',
         'Python',

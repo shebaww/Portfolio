@@ -25,6 +25,7 @@ export default function AwardsPage({ scrollToSection }: Props) {
         <img src="/assets/arrow_down.png" alt="" aria-hidden="true" />
         Back
       </button>
+      <p>And Many More!</p>
     </div>
   );
 }

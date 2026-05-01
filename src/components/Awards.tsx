@@ -52,6 +52,7 @@ export default function Awards() {
           <AwardsCard key={awards.link} awards={awards} index={i} />
         ))}
       </div>
+      <h4 style={{ alignSelf: "center", textAlign: "center" }}>And many More!</h4>
     </div>
   );
 }
