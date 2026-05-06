@@ -11,35 +11,17 @@ return (
 <div className="about-container">
  <div className="about-content glass glow-on-hover">
  <h1 ref={revealRef as React.Ref<HTMLHeadingElement>}>About Me</h1>
-<p>
-        I'm a 16-year-old student in Ethiopia with a deep passion for 
-        mathematics, programming, and quantitative finance. Currently pursuing self-study in Linear Algebra and Calculus I-III. The subjects 
-        I believe form the foundation of any serious quantitative work.
-      </p>
+ <p>
+ I'm a 17-year-old in Ethiopia who self-studies MIT calculus because my school has no advanced math track. I build at the intersection of code and markets. Based in Addis Ababa, I self-study university-level mathematics (Linear Algebra, multivariable Calculus, Differential Equations via MIT OCW) and develop algorithmic trading systems in Python. I don't just watch lectures I solve every problem, write solutions in LaTeX, and publish everything on GitHub. I believe learning in the open is more honest, and a public commit history is more credible than a list of courses.
+</p>
       <p>
-        My interests sit at the intersection of code and markets. I'm building 
-        skills in Python (with plans to tackle the scientific stack: Pandas, NumPy, 
-        Matplotlib) and working toward algorithmic trading projects that combine 
-        my love for programming with financial analysis. The goal: create trading 
-        algorithms and bots that demonstrate real quantitative thinking.
-      </p>
-      <p>
-        Beyond the screen, I'm deeply involved in my school community. I've 
-        competed in multiple Model United Nations conferences taking home Best 
-        Delegate and Outstanding Delegate awards and co-founded my school's first 
-        Business Club, where I built the club website from scratch. I'm also an 
-        executive member of MUN, a debate competitor, and someone who believes 
-        leadership means building things that last.
-      </p>
-      <p>
-        I'm currently working through Harvard's CS50, preparing for future hackathons and documenting everything on GitHub. My 
-        long-term vision involves quantitative research, building intelligent 
-        systems, and eventually contributing to open-source projects that matter.
-      </p>
-      <p>
-        Whether it's soldering electronics on a weekend or grinding through 
-        integral problems on Daily Integral, I'm always looking for the next 
-        challenge that blends analytical rigor with creative problem-solving.
+I've built real systems: a fullstack platform serving 200+ readers for my school's newspaper club, the first website for a Business Club I co-founded, and my own portfolio from scratch. I shadowed Nib Bank's analytics team and worked as a Website Administrator at Addis Asqual.
+
+Outside technical work: I've won multiple Model UN conferences (Best Delegate, Outstanding Delegate) and earned a UNESCO Facilitator certificate. As Head of Delegate Training, I coached over 30 students in argumentation and strategy. Two went on to win Best Delegate and earn international scholarships; five others placed. That matters more to me than my own awards.
+</p><p>
+I'm currently preparing for the AMC 12 while working through Harvard's CS50. My long-term goal is quantitative research: building systems that process real data, make reasoned decisions, and can be held accountable when wrong.
+
+
       </p>
     </div>
       <div className="skills-grid">

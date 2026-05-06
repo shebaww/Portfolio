@@ -104,7 +104,7 @@ export default function Introduction() {
             {currentPhrase}
           </h2>
           <p className="animate-slide-up description" style={{ animationDelay: '0.6s' }}>
-            Welcome to my portfolio! I'm a passionate 16 year old that builds Full-Stack Websites and Algorithm Trading Scripts.
+            Welcome to my portfolio! I'm a passionate 17 year old that builds Full-Stack Websites and Algorithm Trading Scripts.
           </p>
 
           <div className="button-container animate-slide-up" style={{ animationDelay: '0.8s' }}>

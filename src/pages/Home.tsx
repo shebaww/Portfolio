@@ -5,6 +5,7 @@ import Career from '../components/Career';
 import Awards from '../components/Awards';
 import Projects from '../components/Projects';
 import Coursework from '../components/Coursework';
+import SEO from '../components/SEO';
 import { useMagnetic } from '../hooks/useMagnetic';
 import './Home.css';
 
@@ -47,6 +48,12 @@ function ScrollTopBtn({ onClick }: { onClick: () => void }) {
 
 const Home = memo(function Home({ scrollToSection }: HomeProps) {
   return (
+    <>
+        <SEO
+      title="17-Year-Old Quant Dev | MIT OCW, Algo Trading, MUN"
+      description="I'm 17, based in Ethiopia, and I self-study MIT calculus because my school has no advanced math. I build algorithmic trading systems, publish everything to GitHub, and train MUN delegates (2 won intl scholarships). This is my real transcript."
+      path="/"
+    />
     <div className="home-container">
       <section id="home"><Introduction /></section>
       <section id="about"><About /></section>
@@ -82,6 +89,7 @@ const Home = memo(function Home({ scrollToSection }: HomeProps) {
         </div>
       </section>
     </div>
+    </>
   );
 });
 
