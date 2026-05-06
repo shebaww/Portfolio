@@ -50,7 +50,7 @@ const Home = memo(function Home({ scrollToSection }: HomeProps) {
   return (
     <>
         <SEO
-      title="17-Year-Old Quant Dev | MIT OCW, Algo Trading, MUN"
+      title="Nahom Teklemariam Portfolio | 17-Year-Old Quant Dev | MIT OCW, Algo Trading, MUN"
       description="I'm 17, based in Ethiopia, and I self-study MIT calculus because my school has no advanced math. I build algorithmic trading systems, publish everything to GitHub, and train MUN delegates (2 won intl scholarships). This is my real transcript."
       path="/"
     />
