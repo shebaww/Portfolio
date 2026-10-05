@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: 10.5pt;
+        color: #1a1a1a;
+        background: #fff;
+        padding: 0;
+      }
+      .page {
+        width: 8.5in;
+        min-height: 11in;
+        margin: 0 auto;
+        padding: 0.4in 0.65in 0.4in 0.65in;
+        background: #fff;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 6px;
+      }
+      .header h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 26pt;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: #111;
+        margin-bottom: 4px;
+      }
+      .contact-line {
+        font-size: 9pt;
+        color: #333;
+        line-height: 1.4;
+      }
+      .contact-line a {
+        color: #333;
+        text-decoration: none;
+      }
+      .contact-line span {
+        margin: 0 5px;
+        color: #888;
+      }
+
+      .narrative {
+        background: #faf9f8;
+        padding: 5px 10px;
+        margin-bottom: 8px;
+        font-size: 9.5pt;
+        line-height: 1.35;
+        border-left: 2px solid #1a1a1a;
+        color: #2a2a2a;
+      }
+
+      .section {
+        margin-bottom: 5px;
+      }
+      .section-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 10.5pt;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+        padding-bottom: 1px;
+        margin-bottom: 4px;
+      }
+
+      .entry {
+        margin-bottom: 3px;
+      }
+      .entry-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .entry-name {
+        font-weight: 600;
+        font-size: 10.5pt;
+      }
+      .entry-location {
+        font-size: 9.5pt;
+      }
+      .entry-sub {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-style: italic;
+        font-size: 9.5pt;
+        color: #333;
+        margin-bottom: 1px;
+      }
+      .bullets {
+        margin-left: 14px;
+        margin-top: 1px;
+      }
+      .bullets li {
+        font-size: 9.5pt;
+        line-height: 1.4;
+        margin-bottom: 0px;
+        list-style-type: disc;
+      }
+      .bullets li::marker {
+        font-size: 8pt;
+      }
+
+      .skills-block {
+        font-size: 9.5pt;
+        line-height: 1.45;
+      }
+      .skills-block b {
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      .proj-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1px;
+      }
+      .proj-name {
+        font-weight: 600;
+        font-size: 10pt;
+      }
+      .proj-date {
+        font-size: 9pt;
+        font-style: italic;
+        color: #444;
+      }
+      .proj-stack {
+        font-size: 9pt;
+        color: #444;
+        font-style: italic;
+        margin-bottom: 1px;
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+        .page {
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <h1>Nahom Teklemariam</h1>
+        <div class="contact-line">
+          +251 979087331
+          <span>|</span>
+          <a href="mailto:nahomnatnael87@gmail.com">nahomnatnael87@gmail.com</a>
+          <span>|</span>
+          <a href="https://linkedin.com/in/nahomtmariam"
+            >linkedin.com/in/nahomtmariam</a
+          >
+          <span>|</span>
+          <a href="https://nahomtmariam.com">nahomtmariam.com</a>
+        </div>
+      </div>
+
+      <div class="narrative">
+        Self-taught full-stack developer and quantitative research enthusiast.
+        Experienced in algorithmic backtesting, financial data pipelines, and
+        responsive web systems. Combining software engineering with rigorous
+        university-level math (MIT OCW)
+      </div>
+
+      <div class="section">
+        <div class="section-title">Education</div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-name">Andinet International High School</span>
+            <span class="entry-location">Addis Ababa, Ethiopia</span>
+          </div>
+          <div class="entry-sub">
+            <span>High School Diploma — GPA: 3.5/4.0</span>
+            <span>Expected May 2027</span>
+          </div>
+          <div style="font-size: 9pt; color: #333; margin-top: 1px">
+            <b>High School Coursework:</b> Math, Physics, Computer Science,
+            Chemistry, English, Biology<br />
+            <b>Advanced Self-Study & Certifications:</b> MIT OCW 18.01 Calculus
+            I & 18.06 Linear Algebra (Strang), Harvard CS50, Imperial College
+            Machine Learning, Penn Calculus
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-block">
+          <b>Languages:</b> Python, Javascript, SQL, Bash, Typescript,
+          HTML/CSS<br />
+          <b>Data Science & Quantitative:</b> Pandas, NumPy, Statsmodels,
+          vectorbt, Matplotlib, BeautifulSoup4, PyPDF, PdfPlumber<br />
+          <b>Web Frameworks & Tools:</b> React, Tailwind CSS, Firebase, Docker,
+          Git, GitHub Actions, Netlify, Cloudflare<br />
+          <b>Focus Areas:</b> Quantitative Finance, Algorithmic Trading Systems,
+          Full-Stack Software Architecture
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Technical Projects</div>
+
+        <div class="entry">
+          <div class="proj-header">
+            <span class="proj-name">Business Club Website</span>
+            <span class="proj-date">2025 – Present</span>
+          </div>
+          <div class="proj-stack">React · Tailwind CSS · GitHub Pages</div>
+          <ul class="bullets">
+            <li>
+              Built <b>first student-club website in school history</b> for
+              Business Club (co-founded); site remains actively maintained.
+            </li>
+            <li>
+              Designed responsive UI; project serves as club's digital backbone
+              for outreach and event promotion.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="proj-header">
+            <span class="proj-name">Newspaper Club Full-Stack Site</span>
+            <span class="proj-date">2025 – Present</span>
+          </div>
+          <div class="proj-stack">
+            React · Firebase · Tailwind CSS · Netlify
+          </div>
+          <ul class="bullets">
+            <li>
+              Developed and deployed full-stack club website with Firebase
+              backend as club Treasurer.
+            </li>
+            <li>
+              Manages weekly articles for 200+ readers; first dedicated website
+              in club's history.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="proj-header">
+            <span class="proj-name">Personal Portfolio — nahomtmariam.com</span>
+            <span class="proj-date">2025 – Present</span>
+          </div>
+          <div class="proj-stack">
+            React · Tailwind CSS · Cloudflare · GitHub Pages
+          </div>
+          <ul class="bullets">
+            <li>
+              Custom portfolio on personal domain showcasing projects, GitHub
+              activity, and self-study progress.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Experience & Leadership</div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-name">Addis Asqual</span>
+            <span class="entry-location">Addis Ababa, Ethiopia</span>
+          </div>
+          <div class="entry-sub">
+            <span>Website Administrator (Internship)</span>
+            <span>2026 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Maintain company website, ensuring uptime, content accuracy, and
+              performance optimization.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-name">Nib Bank</span>
+            <span class="entry-location">Addis Ababa, Ethiopia</span>
+          </div>
+          <div class="entry-sub">
+            <span>Analytical Team Intern</span>
+            <span>2026 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Supported analytical division by documenting financial data
+              workflows and shadowing quarterly reporting processes.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-name">Business Club</span>
+            <span class="entry-location">Andinet International HS</span>
+          </div>
+          <div class="entry-sub">
+            <span>Co-Founder & Web Lead</span>
+            <span>2025 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Co-founded club, built its first website, and led team to
+              hackathon cash prize (4,000 birr to club).
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-name">Newspaper Club</span>
+            <span class="entry-location">Andinet International HS</span>
+          </div>
+          <div class="entry-sub">
+            <span>Treasurer & Web Developer</span>
+            <span>2025 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Manage club finances and built club's first full-stack website
+              (200+ weekly readers).
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-name">Science Fair Coordinator</span>
+            <span class="entry-location">Andinet International HS</span>
+          </div>
+          <div class="entry-sub">
+            <span>Coordinator</span>
+            <span>2025 – 2026</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Coordinated school-wide science fair: logistics, judging panels,
+              and student project submissions.
+            </li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-name">MUN — Head of Delegate Training</span>
+            <span class="entry-location">Addis Ababa</span>
+          </div>
+          <div class="entry-sub">
+            <span>Trainer & Facilitator</span>
+            <span>2025 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Trained 30+ junior delegates (2 to Best Delegate, 5+ to other
+              honors); facilitator for UNESCO MUN (105 delegates, international
+              certificate). Awards: Best Delegate (Maarif), Outstanding Delegate
+              (AIS MUN 2024/2025).
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Honors & Awards</div>
+        <div class="skills-block" style="font-size: 9pt">
+          <b>3rd Place</b> Ideeza Hackathon 2026 (4,000 birr team prize) •
+          <b>1st Place</b> Debate (Gr9 & Gr10) • <b>UNESCO MUN Facilitator</b>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
